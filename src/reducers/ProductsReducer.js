@@ -113,9 +113,8 @@ const productsReducer = (state, action) => {
             let newQty = item.qty + 1;
             return { ...item, qty: newQty };
           }
-        } else {
-          return item;
         }
+          return item;
       })
       .filter((item) => item.qty > 0);
     return { ...state, cart: tempCart };
