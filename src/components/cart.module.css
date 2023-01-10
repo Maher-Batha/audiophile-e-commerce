@@ -1,0 +1,141 @@
+.cart {
+  position: absolute;
+  top: calc(100% + 32px);
+  right: 0px;
+  width: 380px;
+  height: 488px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color_off_white);
+  border-radius: 8px;
+  z-index: 10;
+  padding: 31px 33px;
+}
+.cart header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  width: 100%;
+}
+.cart header h6 {
+  text-transform: uppercase;
+}
+.remove {
+  color: var(--color_black);
+  text-decoration: underline;
+  text-transform: capitalize;
+  transition: all var(--main_transition);
+  opacity: 0.5;
+  cursor: pointer;
+}
+.remove:hover {
+  color: var(--color_primary);
+  opacity: 1;
+}
+.productList {
+  width: 100%;
+  height: 240px;
+  overflow: auto;
+  margin-bottom: 32px;
+}
+.productList::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+.productList::-webkit-scrollbar-track {
+  background: var(--color_blacK);
+}
+
+/* Handle */
+.productList::-webkit-scrollbar-thumb {
+  background: var(--color_primary);
+}
+
+/* Handle on hover */
+.productList::-webkit-scrollbar-thumb:hover {
+  background: var(--color_secondary);
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.image {
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.info {
+  width: calc(100% - 192px);
+}
+.name {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.price {
+  opacity: 0.5;
+  font-size: 14px;
+}
+.quantity {
+  width: 96px;
+  height: 32px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color_gray);
+  margin-left: 10px;
+  margin-right: 6px;
+}
+.minus,
+.plus {
+  font-size: 6px;
+  color: var(--color_primary);
+  padding: 5px;
+  cursor: pointer;
+}
+.cart footer {
+  width: 100%;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.total p {
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.checkout {
+  width: 100%;
+  display: block;
+}
+.checkout button {
+  background-color: var(--color_primary);
+  color: var(--color_white);
+  width: 100%;
+}
+.checkout:hover button {
+  background-color: var(--color_secondary);
+}
+@media (max-width: 767px) {
+  .cart {
+    width: calc(100% - 10px);
+    padding: 31px 15px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

@@ -1,0 +1,143 @@
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.modal {
+  width: 540px;
+  max-width: calc(100% - 20px);
+  background-color: var(--color_white);
+  border-radius: 5px;
+  padding: 48px;
+}
+.checkIcon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  background-color: var(--color_primary);
+  color: var(--color_white);
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.checkIcon svg {
+  font-size: 36px;
+  line-height: 64px;
+}
+.message {
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.text {
+  opacity: 0.5;
+  margin-bottom: 30px;
+}
+.orderInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.grandTotal {
+  width: 40%;
+  background-color: var(--color_blacK);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--color_white);
+  border-radius: 0px 5px 5px 0px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+.total {
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  opacity: 0.5;
+}
+.amount {
+  font-weight: bold;
+}
+.cart {
+  width: 60%;
+  padding: 32px 0px;
+  padding: 24px 10px;
+  background-color: var(--color_gray);
+  border-radius: 5px 0px 0px 5px;
+}
+.cart li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart li:not(:last-child) {
+  margin-bottom: 24px;
+}
+.cart li img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-right: 16px;
+  border-radius: 5px;
+}
+.info {
+  width: 100%;
+}
+.name {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.price,
+.qty {
+  opacity: 0.5;
+}
+.modal button {
+  background-color: var(--color_primary);
+  color: var(--color_white);
+}
+.modal button:hover {
+  background-color: var(--color_secondary);
+}
+@media (max-width: 767px) {
+  .modal {
+    max-height: 600px;
+    overflow: scroll;
+    padding: 24px;
+  }
+  .checkIcon {
+    margin-bottom: 20px;
+  }
+  .message {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+  .text {
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+  }
+  .orderInfo {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .cart {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    height: 120px;
+    overflow: scroll;
+  }
+  .grandTotal {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
