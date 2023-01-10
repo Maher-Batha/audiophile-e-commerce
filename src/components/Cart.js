@@ -17,7 +17,7 @@ const Cart = () => {
   } = useContext(AppContext);
   useEffect(() => {
     calculateItems();
-  }, [cart]);
+  }, [cart, calculateItems]);
   return (
     <aside className={classes.cart}>
       <header>
